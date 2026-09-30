@@ -1,92 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My App - Download</title>
-
+  <title>App Download</title>
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-
     body {
       font-family: Arial, sans-serif;
-      background: #08080d;
-      color: #fff;
+      background-color: #0d0d0d;
+      color: #ffffff;
       min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 15px;
     }
-
     .container {
-      width: 92%;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    header {
+      width: 100%;
+      max-width: 900px;
       text-align: center;
-      padding: 55px 20px 30px;
     }
-
-    .logo {
-      width: 90px;
-      height: 90px;
-      object-fit: cover;
-      border-radius: 22px;
-      margin-bottom: 18px;
-    }
-
     h1 {
-      font-size: 42px;
-      margin-bottom: 12px;
+      font-size: 32px;
+      margin-bottom: 10px;
     }
-
-    .subtitle {
+    p.subtitle {
       color: #aaa;
-      font-size: 17px;
-      margin-bottom: 28px;
+      font-size: 16px;
+      margin-bottom: 25px;
     }
-
     .download-btn {
       display: inline-block;
-      padding: 18px 42px;
-      border-radius: 15px;
-      background: linear-gradient(135deg, #7c3aed, #2563eb);
-      color: white;
+      padding: 16px 36px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #7c3aed, #4f46e5);
+      color: #ffffff;
       text-decoration: none;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: bold;
-      box-shadow: 0 12px 35px rgba(80, 80, 255, 0.25);
+      box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      margin-bottom: 35px;
     }
-
     .download-btn:hover {
       transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(124, 58, 237, 0.6);
     }
-
-    .small-text {
-      color: #777;
-      margin-top: 12px;
-      font-size: 13px;
+    .gallery-title {
+      font-size: 20px;
+      margin-bottom: 18px;
+      color: #ccc;
     }
-
-    .rating {
-      width: 90%;
-      max-width: 400px;
-      margin: 25px auto 50px;
-      padding: 22px;
-      text-align: center;
-      background: #14141d;
-      border: 1px solid #292938;
-      border-radius: 18px;
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      width: 100%;
     }
-
-    .stars {
-      color: #ffc107;
-      font-size: 28px;
-      letter-spacing: 3px;
+    .image-card {
+      display: block;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid #222;
+      background: #161616;
+      text-decoration: none;
+      transition: transform 0.2s ease, border-color 0.2s ease;
     }
+    .image-card:hover {
+      transform: scale(1.03);
+      border-color: #7c3aed;
+    }
+    .image-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
+</head>
+<body>
 
-    .rating-number {
-      font-size: 28px;
+  <div class="container">
+    <h1>Download App</h1>
+    <p class="subtitle">Latest version download karne ke liye niche click karein</p>
+
+    <!-- Download Button (apna apk link href me daalein) -->
+    <a href="app.apk" download class="download-btn">⬇ Download APK Now</a>
+
+    <h2 class="gallery-title">Screenshots / Gallery</h2>
+
+    <!-- 6 Images Grid (sab me app.apk link hai taaki click karne pe download ho) -->
+    <div class="gallery-grid">
+      <a href="app.apk" download class="image-card">
+        <img src="https://picsum.photos/400/300?random=1" alt="Image 1">
+      </a>
+      <a href="app.apk" download class="image-card">
+        <img src="https://picsum.photos/400/300?random=2" alt="Image 2">
+      </a>
+      <a href="app.apk" download class="image-card">
+        <img src="https://picsum.photos/400/300?random=3" alt="Image 3">
+      </a>
+      <a href="app.apk" download class="image-card">
+        <img src="https://picsum.photos/400/300?random=4" alt="Image 4">
+      </a>
+      <a href="app.apk" download class="image-card">
+        <img src="https://picsum.photos/400/300?random=5" alt="Image 5">
+      </a>
+      <a href="app.apk" download class="image-card">
+        <img src="https://picsum.photos/400/300?random=6" alt="Image 6">
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
